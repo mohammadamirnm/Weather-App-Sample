@@ -7,9 +7,13 @@ abstract class LocationState extends Equatable {
   List<Object> get props => <Object>[];
 }
 
-class LocationInitial extends LocationState {}
+class LocationInitial extends LocationState {
+  const LocationInitial();
+}
 
-class LocationLoading extends LocationState {}
+class LocationLoading extends LocationState {
+  const LocationLoading();
+}
 
 class LocationLoaded extends LocationState {
   const LocationLoaded(this.locationResults);

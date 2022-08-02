@@ -8,10 +8,10 @@ import 'package:weather_app/domain/usecases/get_5_day_forecast.dart';
 part 'weather_state.dart';
 
 class WeatherCubit extends Cubit<WeatherState> {
-  WeatherCubit() : super(WeatherInitial());
+  WeatherCubit() : super(const WeatherInitial());
 
   Future<void> fetchWeather(String city) async {
-    emit(WeatherLoading());
+    emit(const WeatherLoading());
     final WeatherRepository weatherRepository = WeatherRepository();
 
     final Get5DayForecast get5dayForecast = Get5DayForecast(weatherRepository);

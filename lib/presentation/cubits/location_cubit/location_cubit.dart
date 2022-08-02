@@ -8,12 +8,12 @@ import 'package:weather_app/domain/usecases/search_location.dart';
 part 'location_state.dart';
 
 class LocationCubit extends Cubit<LocationState> {
-  LocationCubit() : super(LocationInitial());
+  LocationCubit() : super(const LocationInitial());
 
   Future<void> searchLocation(String? query) async {
     if (query == null || query.isEmpty) return;
 
-    emit(LocationLoading());
+    emit(const LocationLoading());
     final LocationRepository weatherRepository = LocationRepository();
 
     final SearchLocation searchLocation = SearchLocation(weatherRepository);
